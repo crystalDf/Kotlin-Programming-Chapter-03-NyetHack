@@ -21,7 +21,7 @@ fun main(args: Array<String>) {
     val healthStatus = when (healthPoints) {
         100 -> "is in excellent condition!"
         in 90..99 -> "has a few scratches."
-        in 75.. 89 -> if (isBlessed) {
+        in 75..89 -> if (isBlessed) {
             "has some minor wounds but is healing quite quickly!"
         } else {
             "has some minor wounds."
@@ -34,7 +34,7 @@ fun main(args: Array<String>) {
             "(Blessed: ${if (isBlessed) "YES" else "NO"})")
     println("$name $healthStatus")
 
-    val statusFormatString = "(HP)(A) -> H"
+    val statusFormatString = "(HP) (A) -> H"
     val result: StringBuilder = StringBuilder("")
 
     for (i in statusFormatString.indices) {
